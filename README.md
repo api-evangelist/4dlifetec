@@ -64,5 +64,11 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-4D Lifetec is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://equityzen.com/company/4dlifetec
+4D Lifetec AG is a Swiss in-vitro diagnostics company in Cham, Switzerland, developing the 4D Lifetest — a
+non-invasive, immuno-oncological blood test for early cancer detection that reads a DNA Damage Sensitivity
+(DDS) biomarker by single-cell gel electrophoresis on its own 4D Lifechamber instrument, scored by its
+4D LifeAI analysis software. It is a diagnostics manufacturer, not a software vendor, and publishes no
+developer portal, API reference, SDK or machine-readable specification. See `apis.yml` `x-coverage` for the
+probed evidence behind that finding.
+
+- https://4dlifetec.com/

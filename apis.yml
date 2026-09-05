@@ -1,8 +1,23 @@
 aid: 4dlifetec
 name: 4D Lifetec
-description: '4D Lifetec is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  4D Lifetec AG is a Swiss in-vitro diagnostics company headquartered at Gewerbestrasse 8, 6330 Cham,
+  Switzerland, developing the 4D Lifetest — a non-invasive, immuno-oncological blood test for the early
+  detection of cancer. The test reads a proprietary DNA Damage Sensitivity (DDS) biomarker from a liquid
+  biopsy using single-cell gel electrophoresis (the comet assay), run on the company's own 4D Lifechamber
+  instrument for a fully automated and standardized procedure and scored by 4D LifeAI, its trained image
+  analysis software. The flagship product is 4D Lifetest Lung Dx, with 4D Lifetest Breast Dx, Prostate Dx
+  and Colon Dx as further assays in the same platform, and the company holds patent protection across the
+  US, Europe, China and other territories. 4D Lifetec is a diagnostics manufacturer and laboratory-services
+  company, not a software vendor. Its public web presence is an eight-page SilverStripe marketing and
+  investor-relations site with no developer portal, no API reference, no SDKs, no public GitHub
+  organization and no machine-readable specification of any kind; probing every documented contract
+  location on 4dlifetec.com — /openapi.json, /swagger.json, /api-docs, /graphql, /llms.txt and the full
+  /.well-known/ path list — returned the site's SilverStripe 404 page in every case, and no api, docs,
+  developer, portal or app subdomain resolves in DNS. The only software the company describes, 4D LifeAI,
+  is embedded in the instrument rather than exposed as a service.
 url: https://raw.githubusercontent.com/api-evangelist/4dlifetec/refs/heads/main/apis.yml
+image: https://4dlifetec.com/themes/base/images/4D_Lifetec_Logo.svg
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
@@ -12,6 +27,14 @@ created: '2026-09-05'
 modified: '2026-09-05'
 tags:
 - Company
+- Healthcare
+- Diagnostics
+- Oncology
+- Life Sciences
+- Biotechnology
+- Laboratory
+- Medical Devices
+- Switzerland
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +43,46 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://equityzen.com/company/4dlifetec
+  url: https://4dlifetec.com/
+- type: TermsOfService
+  url: https://4dlifetec.com/general-terms-and-conditions/
+- type: PrivacyPolicy
+  url: https://4dlifetec.com/privacy-policy/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/4d-lifetec-ag
+- type: DomainSecurity
+  url: security/4dlifetec-domain-security.yml
+x-enrichment:
+  date: '2026-09-05'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    4D Lifetec AG sells a CE-marked in-vitro diagnostic blood test and the instrument that runs it —
+    its only software, 4D LifeAI, is the image-scoring application embedded in the 4D Lifechamber
+    device — and its entire web presence is an eight-page SilverStripe marketing and investor-relations
+    site whose own sitemap.xml lists no developer, documentation or API page, with /openapi.json,
+    /swagger.json, /api-docs, /graphql, /llms.txt and all nine probed /.well-known/ paths returning the
+    site's 404 on both 4dlifetec.com and www, no api/docs/developer/portal/app subdomain resolving in
+    DNS, and no GitHub organization under the name.
+  evidence:
+  - url: https://4dlifetec.com/
+    status: 200
+  - url: https://4dlifetec.com/sitemap.xml
+    status: 200
+  - url: https://4dlifetec.com/openapi.json
+    status: 404
+  - url: https://4dlifetec.com/graphql
+    status: 404
+  - url: https://4dlifetec.com/llms.txt
+    status: 404
+  - url: https://4dlifetec.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.4dlifetec.com/.well-known/agent.json
+    status: 404
+  - url: https://api.github.com/orgs/4dlifetec
+    status: 404
+  checked: '2026-09-05'

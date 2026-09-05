@@ -1,0 +1,77 @@
+generated: '2026-09-05'
+method: probed
+source: live probes of https://4dlifetec.com/.well-known/* and https://www.4dlifetec.com/.well-known/*
+result: none
+note: >-
+  Recorded absence. 4D Lifetec serves no /.well-known/ document on either host it operates. Every
+  path returns HTTP 404 rendered as the site's SilverStripe not-found page (an HTML body, not a
+  document), on the apex and on www, which redirects to the apex. Nothing returned a 200 carrying a
+  real document, so NO WellKnown and NO SecurityTxt pointer is emitted in apis.yml — the pointer
+  would assert that the provider serves this surface, and it does not. Recorded so the absence is
+  measured rather than assumed.
+also_probed:
+- path: /robots.txt
+  status: 404
+- path: /sitemap.xml
+  status: 200
+  note: served; a two-entry SiteTree/Team sitemap index covering eight marketing pages, no API content
+- path: /llms.txt
+  status: 404
+- path: /openapi.json
+  status: 404
+- path: /swagger.json
+  status: 404
+- path: /api-docs
+  status: 404
+- path: /api
+  status: 404
+- path: /api/v1
+  status: 404
+- path: /api/openapi.json
+  status: 404
+- path: /graphql
+  status: 404
+- path: /wp-json
+  status: 404
+  note: not WordPress — the site runs SilverStripe (/Security/login and /dev/build both answer 200)
+hosts:
+- host: 4dlifetec.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+- host: www.4dlifetec.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
